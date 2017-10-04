@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">BabyName</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="letter_1">අ</string>
+    <string name="letter_2">ඉ</string>
+    <string name="letter_3">උ</string>
+
+    <string name="letter_4">එ</string>
+    <string name="letter_5">ඔ</string>
+    <string name="letter_6">ක</string>
+
+    <string name="letter_7">ග</string>
+    <string name="letter_8">ච</string>
+    <string name="letter_9">ජ</string>
+
+    <string name="letter_10">ට</string>
+    <string name="letter_11">ඩ</string>
+    <string name="letter_12">ත</string>
+
+    <string name="letter_13">ද</string>
+    <string name="letter_14">ධ</string>
+    <string name="letter_15">න</string>
+
+    <string name="letter_16">ප</string>
+    <string name="letter_17">බ</string>
+    <string name="letter_18">භ</string>
+
+    <string name="letter_19">ම</string>
+    <string name="letter_20">ය</string>
+    <string name="letter_21">ර</string>
+
+    <string name="letter_22">ල</string>
+    <string name="letter_23">ව</string>
+    <string name="letter_24">ශ</string>
+
+    <string name="letter_25">ස</string>
+    <string name="letter_26">හ</string>
+
+</resources>
