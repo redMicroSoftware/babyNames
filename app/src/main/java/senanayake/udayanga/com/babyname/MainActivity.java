@@ -1,8 +1,10 @@
 package senanayake.udayanga.com.babyname;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,6 +14,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.List;
+
+import senanayake.udayanga.com.babyname.dao.DatabaseHandler;
+import senanayake.udayanga.com.babyname.model.Name;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,6 +49,16 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        addSampleData();
+        Button button = (Button) findViewById(R.id.letter_1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ViewNameActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -97,5 +116,15 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void addSampleData() {
+        DatabaseHandler db = new DatabaseHandler(this);
+        // Inserting Contacts
+        db.addNames(new Name(1, 1, "Udayanga1", "Description1"));
+        db.addNames(new Name(1, 0, "Udayanga2", "Description2"));
+        db.addNames(new Name(1, 1, "Udayanga3", "Description3"));
+        db.addNames(new Name(1, 0, "Udayanga4", "Description4"));
+        db.addNames(new Name(1, 1, "Udayanga5", "Description5"));
     }
 }
